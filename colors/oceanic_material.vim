@@ -61,16 +61,9 @@ if s:oceanic_material_allow_undercurl == 1
   let s:undercurl = ' cterm=undercurl gui=undercurl '
 endif
 
-let s:background = {
-      \'medium': ['#282C34', '235'],
-      \'ocean' : ['#1b2b34', '235'],
-      \'deep': ['#212121', 'NONE'],
-      \'darker': ['#1d1f21', '234'],
-      \}
-
 let s:colors = {
-      \ 'bg0':              s:background[s:oceanic_material_background],
-      \ 'bg1':              ['#343d46',   '237'],
+      \ 'bg0':              ['#11242e', '235'],
+      \ 'bg1':              ['#26303b',   '237'],
       \ 'bg2':              ['#282828',   '235'],
       \ 'bg3':              ['#3c3836',   '237'],
       \ 'bg4':              ['#3c3836',   '237'],
@@ -176,7 +169,7 @@ function! s:apply_syntax_highlightings()
   exec 'hi iCursor'. s:fg_none . s:bg_none . s:reverse
   exec 'hi lCursor'. s:fg_none . s:bg_none . s:reverse
   exec 'hi CursorIM'. s:fg_none . s:bg_none . s:reverse
-  exec 'hi CursorColumn'. s:fg_none. s:fg_bg1
+  exec 'hi CursorColumn'. s:fg_none. s:bg_bg1
   exec 'hi CursorLine'. s:fg_none . s:bg_bg1
   exec 'hi LineNr'. s:fg_grey0
   exec 'hi CursorLineNr'. s:fg_fg1
