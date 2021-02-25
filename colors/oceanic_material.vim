@@ -62,7 +62,9 @@ if s:oceanic_material_allow_undercurl == 1
 endif
 
 let s:colors = {
-      \ 'bg0':              ['#11242e', '235'],
+      \ 'bg0':              ['#11242e',   '235'],
+      \ 'bg0_0':            ['#1e2e38',   '237'],
+      \ 'bg0_1':            ['#283740',   '237'],
       \ 'bg1':              ['#26303b',   '237'],
       \ 'bg2':              ['#282828',   '235'],
       \ 'bg3':              ['#3c3836',   '237'],
@@ -169,8 +171,8 @@ function! s:apply_syntax_highlightings()
   exec 'hi iCursor'. s:fg_none . s:bg_none . s:reverse
   exec 'hi lCursor'. s:fg_none . s:bg_none . s:reverse
   exec 'hi CursorIM'. s:fg_none . s:bg_none . s:reverse
-  exec 'hi CursorColumn'. s:fg_none. s:bg_bg1
-  exec 'hi CursorLine'. s:fg_none . s:bg_bg1
+  exec 'hi CursorColumn'. s:fg_none. s:bg_bg0_0
+  exec 'hi CursorLine'. s:fg_none . s:bg_bg0_0
   exec 'hi LineNr'. s:fg_grey0
   exec 'hi CursorLineNr'. s:fg_fg1
   exec 'hi DiffAdd'. s:fg_black . s:bg_green
@@ -1152,6 +1154,11 @@ function! s:apply_syntax_highlightings()
   "===============================================================
   exec 'hi Floaterm' .s:fg_none . s:bg_bg0
   exec 'hi FloatermBorder' .s:fg_blue . s:bg_none
+  "===============================================================
+  " nathanaelkane/vim-indent-guides
+  "===============================================================
+  exec 'hi IndentGuidesOdd' . s:fg_none . s:bg_bg0_0
+  exec 'hi IndentGuidesEven' . s:fg_none . s:bg_bg0_1
 
 endfunction
 
